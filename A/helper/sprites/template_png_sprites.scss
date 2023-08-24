@@ -1,0 +1,47 @@
+// PNG SPRITES
+// ========================================================================
+// !!! Usage: PNGs should just be used if a svg is not practicable. e.q. if the sprite includes alpha-shadows and similar
+
+
+// Sprite Source
+// ------------------------------------------------------------------------
+// Add this class to elements, to add background-src and retina logic
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@mixin nr-png {
+  background-repeat: no-repeat;
+  background-image: url('{{{options.image_url}}}');
+  display:block;
+  // span& {
+  //   display:inline-block;
+  // }
+  @media (min-resolution: 2dppx) {
+    $url2x: str-replace('{{{options.image_url}}}','\.png','@2x.png');
+    background-image: url($url2x);
+  }
+}
+
+
+// PNG Sprite Selector Mixins
+// ------------------------------------------------------------------------
+// Us these mixins to add positioning for the desired sprite. If using the -src variant, background logic from .nr-png will also be added.
+
+{{#items}}
+
+@mixin nr-sprite-{{name}} ($percent:100%) {
+  @include nr-png();
+  width: {{px.width}};
+  height: {{px.height}};
+  background-position: {{px.offset_x}} {{px.offset_y}};
+  background-size: {{px.total_width}} {{px.total_height}};
+}
+{{/items}}

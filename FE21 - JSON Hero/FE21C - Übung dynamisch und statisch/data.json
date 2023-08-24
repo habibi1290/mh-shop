@@ -1,0 +1,116 @@
+[
+  {
+    "Name": "Black Widow",
+    "EchterName": "Natasha Romanoff",
+    "Geburtsort": "Stalingrad, Russland",
+    "Geschlecht": "Weiblich",
+    "Kräfte": [
+      "Akrobatik",
+      "Gedächtnis",
+      "Verbesserte Sinne",
+      "Hacking",
+      "Ausdauer"
+    ],
+    "INTELLIGENCE": 75,
+    "STRENGTH": 16,
+    "SPEED": 25,
+    "COMBAT": 100
+  },
+
+  {
+    "Name": "Iron Man",
+    "EchterName": "Tony Stark",
+    "Geschlecht": "Männlich",
+    "Kräfte": [
+      "Energiestrahl",
+      "Ausdauer",
+      "Stärke",
+      "Intelligenz",
+      "Taktik",
+      "Fliegen"
+    ],
+    "INTELLIGENCE": 85,
+    "STRENGTH": 75,
+    "SPEED": 30,
+    "COMBAT": 40
+  },
+
+  {
+    "Name": "Captain America",
+    "EchterName": "Steven Rogers",
+    "Geburtsort": [
+      "Brooklyn",
+      "New York City",
+      "USA"
+    ],
+    "Geschlecht": "Männlich",
+    "Kräfte": [
+      "Stärke",
+      "Ausdauer",
+      "Intelligenz",
+      "Geschwindigkeit"
+    ],
+    "INTELLIGENCE": 90,
+    "STRENGTH": 25,
+    "SPEED": 55,
+    "COMBAT": 100
+  },
+
+  {
+    "Name": "Scarlet Witch",
+    "EchterName": "unbekannt",
+    "Geschlecht": "Weiblich",
+    "Kräfte": [
+      "Chaos Magie",
+      "Fliegen",
+      "Energiestrahlen",
+      "Zeitreisen"
+    ],
+    "INTELLIGENCE": 100,
+    "STRENGTH": 1,
+    "SPEED": 100,
+    "COMBAT": 60
+  },
+
+  {
+    "Name": "Hulk",
+    "EchterName": "Bruce Banner",
+    "Geschlecht": "Männlich",
+
+    "Kräfte": [
+      "Heilung",
+      "Stärke",
+      "Ausdauer",
+      "Springen",
+      "Geschwindigkeit"
+    ],
+    "INTELLIGENCE": 70,
+    "STRENGTH": 100,
+    "SPEED": 90,
+    "COMBAT": 75
+  },
+
+  {
+    "Name": "Thor",
+    "EchterName": "Thor Odinson",
+    "Geburtsort": "Asgard",
+    "Geschlecht": "Männlich",
+    "Kräfte": [
+      "Unverwundbarkeit",
+      "Ausdauer",
+      "Stärke",
+      "Elektrokinese"
+    ],
+    "INTELLIGENCE": 40,
+    "STRENGTH": 100,
+    "SPEED": 75,
+    "COMBAT": 75
+  }
+]
+
+
+
+
+
+
+

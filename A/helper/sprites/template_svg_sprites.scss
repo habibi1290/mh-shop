@@ -1,0 +1,41 @@
+// SVG SPRITES
+// ========================================================================
+// !!! Usage: SVGs are best used for icons and logos
+
+// Sprite Source & PNG-Fallback
+// ------------------------------------------------------------------------
+// Add this class to elements, to add background-src and no-svg logic
+
+@mixin {{prefix}}{{commonName}}() {
+  background-repeat: no-repeat;
+  background-image: url("../../img/sprites/{{dynfilename}}");
+  display:block;
+// span& {
+//   display:inline-block;
+// }
+}
+
+// SVG Sprite Selector Mixins
+// ------------------------------------------------------------------------
+// Use these mixins to add positioning for the desired sprite. If using the -src variant, background logic from .nr-png will also be added.
+
+
+$nr-sprite-padding:1;
+{{#shapes}}
+{{#selector.shape}}@mixin {{expression}}{{^last}},
+{{/last}}{{/selector.shape}} ($percent:100%) {
+  @include {{common}}();
+  $factor : 1;
+  @if unitless($percent) {
+    $factor : $percent/100;
+  } @else {
+    $factor : $percent/100%;
+  }
+  width: (({{width.inner}}*$factor)+$nr-sprite-padding*2)*1px;
+  height: ((({{height.inner}}*$factor)+$nr-sprite-padding*2))*1px;
+  background-position: (({{position.absolute.x}}-{{padding.top}})*$factor + $nr-sprite-padding)*1px (({{position.absolute.y}}-{{padding.top}})*$factor + $nr-sprite-padding)*1px;
+  background-size: ({{spriteWidth}}*$factor)*1px ({{spriteHeight}}*$factor)*1px;
+{{^common}}
+.{{prefix}}();{{/common}}
+}
+{{/shapes}}
