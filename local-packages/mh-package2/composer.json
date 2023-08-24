@@ -1,0 +1,12 @@
+{
+  "name": "mh/package2",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Mh\\package2\\": "src/"
+    }
+  },
+
+  "minimum-stability": "dev",
+  "prefer-stable": false
+}

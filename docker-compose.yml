@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    container_name: mh-package1-package2-shops
+    volumes:
+      - ./src/:/var/www/html/
+    ports:
+      - "8080:80"
+
+    external_links:
+      - mysql:nrdocker_mysql
+      - mailhog:nrdocker_mailhog
+    stdin_open: true
+    tty: true
+
+# Default Network
+networks:
+  default:
+    external:
+      name: nrdocker_default

@@ -1,0 +1,47 @@
+{
+    "name": "mh/shop",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mh\\Shop\\": "src/"
+        }
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+
+    "authors": [
+        {
+            "name": "Mahdi Habibi",
+            "email": "mhabibi@noriskshop.de"
+        }
+    ],
+
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/mrStronge/simple-router" },
+        {
+            "type": "path",
+            "url": "local-packages/mh-package1",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "local-packages/mh-package2",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+
+    "require": {
+        "mrstronge/simple-router": "dev-main",
+        "ext-mysqli": "*",
+        "symfony/mailer": "^6.2",
+        "paypal/rest-api-sdk-php": "^1.14",
+        "phpmailer/phpmailer": "^6.8",
+        "mh/package1": "@dev",
+        "filp/whoops": "^2.15"
+    }
+}

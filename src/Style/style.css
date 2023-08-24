@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    background-color: yellowgreen;
+    font-size: 50px;
+}
+
+.main {
+    height: 200px;
+    border: 1px solid black;
+    font-size: 40px;
+}
+
+.liste {
+    border: 2px solid black;
+}
+
+.navbar {
+    border: 2px solid black;
+}
+
+table,th,td {
+    border: 2px solid black;
+}
+
+th {
+    font-size: 30px;
+}
+
+td {
+    font-size: 20px;
+}
+
+.card-text {
+    font-size: 15px;
+}
+img {
+    max-width: 100%;
+    height:auto;
+    background-color: lightblue;
+    background: radial-gradient(white 30%, lightblue70%);
+}
+
+.fa-star,
+.fa-star-half {
+    color: yellowgreen;
+    padding: 3% 0;
+}

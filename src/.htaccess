@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteCond %{REQUEST_URI} !.(css|gif|ico|jpg|js|png|swf|txt)$
+    # Push every request to index.View.php
+    RewriteRule ^(.*)$ index.php [QSA]
+</IfModule>
+
